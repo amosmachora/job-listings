@@ -1,0 +1,142 @@
+.flex {
+  display: flex;
+}
+.tools {
+  margin-left: auto;
+  flex-wrap: wrap;
+  text-align: right;
+}
+.container {
+  align-items: center;
+  height: 100px;
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 3px;
+  position: relative;
+}
+.bar {
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  border-radius: 3px 0px 0px 3px;
+  background-color: var(--desaturatedDarkCyan);
+}
+.company-logo {
+  margin: 40px;
+  width: 70px;
+  height: 70px;
+}
+.company-name {
+  font-size: 0.8rem;
+  color: #5da6a4;
+  font-weight: 700;
+}
+.new {
+  background-color: #5da6a4;
+  color: white;
+  margin: 0px 10px;
+  font-size: 0.8rem;
+}
+.new,
+.featured {
+  padding: 6px;
+  border-radius: 12px;
+  font-size: 0.6rem;
+}
+.job-details-section > .flex {
+  align-items: center;
+}
+.featured {
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+}
+.job-title {
+  font-weight: 700;
+  margin: 15px 0px;
+}
+.job-details-section > .flex:last-of-type {
+  font-size: 0.8rem;
+  font-weight: 500;
+  justify-content: space-between;
+  color: var(--darkGrayishCyan);
+}
+.tools {
+  margin-right: 4%;
+  width: 40%;
+}
+.tools p {
+  margin-left: 20px;
+  color: #5da6a4;
+  background-color: var(--lightGrayishCyanFilterTablets);
+  font-size: calc(1rem - 2px);
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.tools p:hover {
+  background-color: var(--desaturatedDarkCyan);
+  color: #fff;
+  transition: background-color 800ms ease-in-out;
+}
+.splitter {
+  display: none;
+}
+.about {
+  color: var(--darkGrayishCyan);
+}
+.about > * {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 1150px) {
+  .company-logo {
+    margin-left: 20px;
+  }
+  .tools {
+    margin-right: 1%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .company-logo {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+  }
+  .job-details-section {
+    margin: 40px 20px;
+    margin-bottom: 10px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: unset;
+    height: unset;
+    padding-right: 50px;
+    margin-top: 50px;
+  }
+  .job-details-section > .flex:first-of-type {
+    justify-content: space-between;
+  }
+  .tools {
+    margin-left: unset;
+    margin-bottom: 20px;
+    align-items: center;
+    width: 100%;
+  }
+  .splitter {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: var(--darkGrayishCyan);
+    margin-top: 60px;
+  }
+  .job-title {
+    margin: 10px 0px;
+  }
+}
